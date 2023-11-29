@@ -1,0 +1,27 @@
+{
+  "name": "rusty-raptor",
+  "version": "1.0.0",
+  "description": "A microservice for auth - but better",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlphaRomeoMike/rusty-raptor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlphaRomeoMike/rusty-raptor/issues"
+  },
+  "homepage": "https://github.com/AlphaRomeoMike/rusty-raptor#readme",
+  "dependencies": {
+    "@prisma/client": "^5.6.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: npm start
+    volumes:
+      - .:/usr/app
+      - .:/node_modules
+  database:
+    image: postgres:latest
+    container_name: rusty_raptor_db
+    environment:
+      - POSTGRES_USER=raptor
+      - POSTGRES_PASSWORD= @dM!n
+      - POSTGRES_DB= rusty_raptor
+    restart: unless-stopped
+    ports:
+      - "5437:5437"

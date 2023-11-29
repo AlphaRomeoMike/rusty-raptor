@@ -1,2 +1,8 @@
 # rusty-raptor
-A microservice for auth - but better
+
+
+### Requirements
+- Node version: 20+
+- Docker: required
+- Database: Postgres
+- Default Port: 80

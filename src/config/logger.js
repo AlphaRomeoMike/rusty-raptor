@@ -1,0 +1,1 @@
+module.exports = { info, warn, error, dir, log } = console;
