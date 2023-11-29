@@ -12,8 +12,10 @@ services:
     container_name: rusty_raptor_db
     environment:
       - POSTGRES_USER=raptor
-      - POSTGRES_PASSWORD= @dM!n
-      - POSTGRES_DB= rusty_raptor
+      - POSTGRES_PASSWORD=@dM!n
+      - POSTGRES_DB=rusty_raptor
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/migration.sql
     restart: unless-stopped
     ports:
-      - "5437:5437"
+      - "5437:5432"
