@@ -7,13 +7,18 @@ services:
     volumes:
       - .:/usr/app
       - .:/node_modules
+  cache:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=mysecretpassword
   database:
     image: postgres:latest
     container_name: rusty_raptor_db
-    environment:
       - POSTGRES_USER=raptor
-      - POSTGRES_PASSWORD= @dM!n
-      - POSTGRES_DB= rusty_raptor
+      - POSTGRES_PASSWORD=@dM!n
+      - POSTGRES_DB=rusty_raptor
     restart: unless-stopped
     ports:
       - "5437:5437"
